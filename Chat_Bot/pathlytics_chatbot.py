@@ -1,8 +1,10 @@
 import os
 from groq import Groq
 
+GROQ_API_KEY= "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"
+
 print("PATHLYTICS BOT v2.0 (Website-Aware)")
-client = Groq(api_key=os.getenv('GROQ_API_KEY'))
+client = Groq(api_key= GROQ_API_KEY)
 print("Groq connected!")
 
 # 1) Load your website content from local file
