@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pathlytics Career Bot</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Just some page content -->
+    <div class="main-content">
+        <h1>Pathlytics</h1>
+        <p>Career guidance assistant</p>
+    </div>
+
+    <!-- Floating Chat Icon -->
+    <button class="chat-toggle" id="chatToggle" aria-label="Open chat">
+        <!-- Simple chat icon (SVG) -->
+        <svg viewBox="0 0 24 24" class="chat-icon">
+            <path d="M4 5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H9l-4 4v-4H6a2 2 0 0 1-2-2z" fill="currentColor"/>
+        </svg>
+    </button>
+
+    <!-- Chat Window -->
+    <div class="chat-container" id="chatContainer">
+        <div class="chat-header">
+            <div class="chat-title">
+                <span class="bot-avatar">P</span>
+                <div>
+                    <h3>Pathlytics Bot</h3>
+                    <p>Career advisor</p>
+                </div>
+            </div>
+            <button class="close-chat" id="closeChat">&times;</button>
+        </div>
+
+        <div class="chat-messages" id="chatMessages">
+            <!-- Initial greeting from bot -->
+            <div class="message bot-message">
+                <div class="message-content">
+                    <strong>Pathlytics Bot:</strong> Hi! 👋 I’m your Pathlytics career assistant. 
+                    Ask me about features, how it works, or what the site offers.
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-input-container">
+            <input 
+                type="text" 
+                id="messageInput" 
+                placeholder="Type your question here..." 
+                autocomplete="off"
+            >
+            <button id="sendButton">Send</button>
+        </div>
+
+        <!-- New End Chat button -->
+        <div class="chat-end-container">
+            <button id="endChatButton" class="end-chat-button">End Chat</button>
+        </div>
+
+        <div class="chat-status" id="chatStatus">Connected to Pathlytics backend.</div>
+    </div>
+
+    <!-- This script is the only thing you need to hook to your Flask /chat -->
+    <script src="script.js"></script>
+</body>
+</html>

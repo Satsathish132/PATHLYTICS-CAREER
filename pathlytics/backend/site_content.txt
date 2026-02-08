@@ -1,0 +1,200 @@
+Empowering Computer Science students and job seekers with AI-powered career guidance, personalized roadmaps, and expert mentorship.
+
+PATHLYTICS-CAREER
+Career Recommendation
+Roadmaps
+Chatbot
+
+Career Recommendations
+Discover careers that match your skills and interests.
+
+Search by career title...
+Select Skills
+
+Python
+JavaScript
+Java
+SQL
+React
+Node.js
+Machine Learning
+Cloud Computing
+AWS
+Docker
+TensorFlow
+Kubernetes
+Network Security
+Penetration Testing
+Showing 6 careers
+
+Very High Demand
+
+AI/ML Engineer
+Design, develop, and deploy machine learning models and AI systems for real-world applications.
+
+Python
+TensorFlow
+PyTorch
+Machine Learning
++1 more
+Salary
+
+$120k - $200k
+
+Growth
+
++40%
+
+Education
+
+Bachelor's
+
+View Roadmap
+High Demand
+
+Full Stack Developer
+Build complete web applications handling both frontend user interfaces and backend server logic.
+
+JavaScript
+React
+Node.js
+SQL
++1 more
+Salary
+
+$90k - $150k
+
+Growth
+
++25%
+
+Education
+
+Bachelor's
+
+View Roadmap
+Very High Demand
+
+Cloud Solutions Architect
+Design scalable cloud infrastructure and lead digital transformation initiatives.
+
+AWS
+Azure
+GCP
+Docker
++1 more
+Salary
+
+$130k - $200k
+
+Growth
+
++35%
+
+Education
+
+Bachelor's
+
+View Roadmap
+High Demand
+
+Data Scientist
+Extract insights from complex data sets using statistical analysis and machine learning.
+
+Python
+R
+SQL
+Statistics
++1 more
+Salary
+
+$110k - $170k
+
+Growth
+
++28%
+
+Education
+
+Master's
+
+View Roadmap
+Very High Demand
+
+Cybersecurity Analyst
+Protect organizations from cyber threats and ensure data security compliance.
+
+Network Security
+Penetration Testing
+SIEM
+Incident Response
+Salary
+
+$100k - $160k
+
+Growth
+
++32%
+
+Education
+
+Bachelor's
+
+View Roadmap
+High Demand
+
+DevOps Engineer
+Bridge development and operations with automation, CI/CD, and infrastructure as code.
+
+Jenkins
+Docker
+Terraform
+Linux
++1 more
+Salary
+
+$100k - $160k
+
+Growth
+
++24%
+
+Education
+
+Bachelor's
+
+View Roadmap
+
+Career Roadmaps
+Choose a career path and follow the step-by-step guide to achieve your goals.
+
+High Demand
+Frontend Developer
+Master modern frontend technologies and build beautiful user interfaces.
+
+JavaScript
+React
+TypeScript
++2 more
+$70k - $130k
++23%
+High Demand
+Backend Developer
+Build robust server-side applications and APIs.
+
+Python
+Node.js
+SQL
++2 more
+$80k - $150k
++25%
+Very High Demand
+Cloud Engineer
+Design and manage scalable cloud infrastructure.
+
+AWS
+Azure
+GCP
++2 more
+$100k - $180k
++35%
