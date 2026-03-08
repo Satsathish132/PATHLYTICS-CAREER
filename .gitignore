@@ -48,3 +48,6 @@ Thumbs.db
 
 # Logs
 *.log
+
+Chat_Bot/
+pathlytics-chatbot/
