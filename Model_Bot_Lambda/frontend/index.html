@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Pathalytics Assistant</title>
+  <style>
+    /* Root */
+    #pathalytics-assistant {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      z-index: 9999;
+    }
+
+    /* Toggle button (blue) */
+    #assistant-toggle {
+      background: linear-gradient(135deg, #2563eb, #4f46e5);
+      color: #ffffff;
+      border-radius: 999px;
+      padding: 10px 16px;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+      box-shadow: 0 10px 30px rgba(37, 99, 235, 0.5);
+      transition: background 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease;
+    }
+
+    #assistant-toggle:hover {
+      background: linear-gradient(135deg, #1d4ed8, #4338ca);
+      transform: translateY(-1px);
+      box-shadow: 0 14px 36px rgba(30, 64, 175, 0.6);
+    }
+
+    #assistant-toggle:active {
+      transform: translateY(0);
+      box-shadow: 0 8px 22px rgba(30, 64, 175, 0.45);
+    }
+
+    /* Panel */
+    #assistant-panel {
+      width: 320px;
+      height: 420px;
+      background: radial-gradient(circle at top left, #1e3a8a 0, #020617 50%, #020617 100%);
+      border-radius: 16px;
+      box-shadow: 0 18px 55px rgba(15, 23, 42, 0.85);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      margin-top: 8px;
+      border: 1px solid rgba(59, 130, 246, 0.4);
+    }
+
+    /* Header */
+    #assistant-header {
+      padding: 10px 12px;
+      background: linear-gradient(135deg, #1d4ed8, #4f46e5);
+      color: #f9fafb;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    /* Messages */
+    #assistant-messages {
+      flex: 1;
+      padding: 10px;
+      overflow-y: auto;
+      font-size: 13px;
+      background: radial-gradient(circle at top, #020617 0, #020617 45%, #020617 100%);
+      color: #e5e7eb;
+    }
+
+    #assistant-messages::-webkit-scrollbar {
+      width: 6px;
+    }
+    #assistant-messages::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    #assistant-messages::-webkit-scrollbar-thumb {
+      background: rgba(148, 163, 184, 0.7);
+      border-radius: 999px;
+    }
+
+    .message {
+      margin-bottom: 8px;
+      line-height: 1.4;
+      display: flex;
+    }
+
+    .message.user {
+      justify-content: flex-end;
+      color: #e5e7eb;
+    }
+
+    .message.bot {
+      justify-content: flex-start;
+      color: #e5e7eb;
+    }
+
+    .message.user span {
+      background: linear-gradient(135deg, #2563eb, #4f46e5);
+      color: #ffffff;
+      padding: 6px 10px;
+      border-radius: 14px;
+      border-bottom-right-radius: 4px;
+      display: inline-block;
+      white-space: pre-wrap;
+      max-width: 80%;
+    }
+
+    .message.bot span {
+      background: rgba(15, 23, 42, 0.95);
+      color: #e5e7eb;
+      padding: 6px 10px;
+      border-radius: 14px;
+      border-bottom-left-radius: 4px;
+      display: inline-block;
+      white-space: pre-wrap;
+      max-width: 80%;
+      border: 1px solid rgba(51, 65, 85, 0.9);
+    }
+
+    /* Controls + auto-growing textarea */
+    #assistant-controls {
+      display: flex;
+      align-items: flex-end;
+      gap: 6px;
+      padding: 8px;
+      border-top: 1px solid rgba(30, 64, 175, 0.6);
+      background: rgba(15, 23, 42, 0.98);
+    }
+
+    #assistant-input {
+      flex: 1;
+      padding: 6px 8px;
+      border-radius: 8px;
+      border: 1px solid #3b82f6;
+      font-size: 13px;
+      background: rgba(15, 23, 42, 0.9);
+      color: #e5e7eb;
+      resize: none;
+      min-height: 32px;
+      max-height: 96px;
+      line-height: 1.4;
+      overflow-y: auto;
+    }
+
+    #assistant-input::placeholder {
+      color: #9ca3af;
+    }
+
+    #assistant-send {
+      border-radius: 999px;
+      border: none;
+      padding: 0 10px;
+      font-size: 13px;
+      cursor: pointer;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #assistant-mic {
+      border-radius: 999px;
+      border: none;
+      padding: 0 10px;
+      font-size: 13px;
+      cursor: pointer;
+      height: 32px;
+      display: none;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #assistant-send {
+      background: #2563eb;
+      color: white;
+      box-shadow: 0 6px 18px rgba(37, 99, 235, 0.6);
+      transition: background 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease;
+    }
+
+    #assistant-send:hover {
+      background: #1d4ed8;
+      transform: translateY(-0.5px);
+      box-shadow: 0 8px 24px rgba(37, 99, 235, 0.7);
+    }
+
+    #assistant-send:active {
+      transform: translateY(0);
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.5);
+    }
+
+    #assistant-mic {
+      background: rgba(15, 23, 42, 0.9);
+      color: #e5e7eb;
+      border: 1px solid rgba(55, 65, 81, 0.9);
+    }
+
+    #assistant-mic.recording {
+      background: #ef4444;
+      color: #f9fafb;
+      border-color: #fca5a5;
+    }
+  </style>
+</head>
+<body>
+<div id="pathalytics-assistant">
+  <button id="assistant-toggle">Ask Pathalytics AI</button>
+
+  <div id="assistant-panel" style="display:none;">
+    <div id="assistant-header">Pathalytics Assistant</div>
+    <div id="assistant-messages"></div>
+    <div id="assistant-controls">
+      <button id="assistant-mic">🎤</button>
+      <textarea
+        id="assistant-input"
+        rows="1"
+        placeholder="Ask about careers, skills, or roadmaps..."
+      ></textarea>
+      <button id="assistant-send">Send</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  const API_BASE = "http://localhost:8001"; // change to your backend URL in production
+
+  const toggleBtn = document.getElementById("assistant-toggle");
+  const panel = document.getElementById("assistant-panel");
+  const messagesDiv = document.getElementById("assistant-messages");
+  const input = document.getElementById("assistant-input");
+  const sendBtn = document.getElementById("assistant-send");
+  const micBtn = document.getElementById("assistant-mic");
+
+  const SpeechRecognition =
+    window.SpeechRecognition || window.webkitSpeechRecognition;
+
+  if (!localStorage.getItem("pathalytics_session")) {
+    localStorage.setItem(
+      "pathalytics_session",
+      Math.random().toString(36).slice(2)
+    );
+  }
+
+  let recognition;
+  let listening = false;
+
+  if (SpeechRecognition) {
+    recognition = new SpeechRecognition();
+    recognition.lang = "en-IN";
+    recognition.interimResults = true;
+    recognition.continuous = true;
+
+    recognition.onstart = () => {
+      console.log("Speech recognition started");
+    };
+
+    recognition.onresult = (event) => {
+      console.log("onresult fired", event);
+
+      let fullTranscript = "";
+      for (let i = 0; i < event.results.length; i++) {
+        fullTranscript += event.results[i][0].transcript + " ";
+      }
+      fullTranscript = fullTranscript.trim();
+      console.log("Full transcript:", fullTranscript);
+
+      input.value = fullTranscript;
+      if (typeof autoResizeInput === "function") {
+        autoResizeInput();
+      }
+    };
+
+    recognition.onerror = (event) => {
+      console.error("Speech recognition error:", event.error);
+    };
+
+    recognition.onend = () => {
+      console.log("Speech recognition ended");
+      listening = false;
+      micBtn.textContent = "🎤";
+      micBtn.classList.remove("recording");
+    };
+  } else {
+    console.warn("SpeechRecognition not supported in this browser");
+  }
+
+  function autoResizeInput() {
+    input.style.height = "auto";
+    input.style.height = input.scrollHeight + "px";
+  }
+  input.addEventListener("input", autoResizeInput);
+
+  function extractRoadmapJsonFromReply(text) {
+    const match = text.match(/```json([\s\S]*?)```/);
+    if (!match) return null;
+    try {
+      const jsonStr = match[1].trim();
+      return JSON.parse(jsonStr);
+    } catch (e) {
+      console.error("Failed to parse roadmap JSON:", e);
+      return null;
+    }
+  }
+
+  function cleanTextForDisplay(text) {
+    let cleaned = text;
+    cleaned = cleaned.replace(/\*\*(.*?)\*\*/g, "$1");
+    cleaned = cleaned.replace(/\*(.*?)\*/g, "$1");
+    cleaned = cleaned.replace(/^[\s]*[\*\-\u2022]+\s*/gm, "");
+    cleaned = cleaned.replace(/^[\s]*\d+[\.\)]\s*/gm, "");
+    cleaned = cleaned.replace(/[ \t]+/g, " ");
+    return cleaned.trim();
+  }
+
+  function formatBotTextToLines(text) {
+    let cleaned = cleanTextForDisplay(text);
+    const parts = cleaned.split(/(?<=[\.:\?])\s+/);
+    return parts.join("\n");
+  }
+
+  function appendMessage(text, who) {
+    const wrapper = document.createElement("div");
+    wrapper.className = "message " + who;
+    const bubble = document.createElement("span");
+    let finalText = text;
+    if (who === "bot") {
+      finalText = formatBotTextToLines(text);
+    }
+    bubble.textContent = finalText;
+    wrapper.appendChild(bubble);
+    messagesDiv.appendChild(wrapper);
+    messagesDiv.scrollTop = messagesDiv.scrollHeight;
+  }
+
+  async function sendMessage() {
+    const text = input.value.trim();
+    if (!text) return;
+
+    appendMessage(text, "user");
+    input.value = "";
+    input.style.height = "32px";
+
+    try {
+      const res = await fetch(API_BASE + "/api/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          message: text,
+          current_page: window.location.pathname,
+          user_level: "intermediate",
+          session_id:
+            "browser-" +
+            (localStorage.getItem("pathalytics_session") || "default"),
+        }),
+      });
+
+      const data = await res.json();
+
+      appendMessage(data.reply, "bot");
+
+      if (data.intent === "navigation" && data.target_url) {
+        // optional navigation
+      }
+
+      if (data.intent === "roadmap" && data.has_roadmap_json) {
+        const roadmapSpec = extractRoadmapJsonFromReply(data.reply);
+        if (roadmapSpec) {
+          try {
+            const imgRes = await fetch(API_BASE + "/api/roadmap-image", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({
+                roadmap_spec: roadmapSpec,
+                prompt:
+                  "Clean, student-friendly career roadmap infographic for learners in India",
+              }),
+            });
+
+            const imgData = await imgRes.json();
+            if (imgData.image_url) {
+              const wrapper = document.createElement("div");
+              wrapper.className = "message bot";
+              const img = document.createElement("img");
+              img.src = imgData.image_url;
+              img.alt = "Career roadmap";
+              img.style.maxWidth = "100%";
+              img.style.borderRadius = "8px";
+              img.style.marginTop = "4px";
+              wrapper.appendChild(img);
+              messagesDiv.appendChild(wrapper);
+              messagesDiv.scrollTop = messagesDiv.scrollHeight;
+            }
+          } catch (e) {
+            console.error("Error generating roadmap image:", e);
+          }
+        }
+      }
+    } catch (err) {
+      console.error(err);
+      appendMessage("Sorry, I had trouble reaching the server.", "bot");
+    }
+  }
+
+  toggleBtn.addEventListener("click", () => {
+    panel.style.display = panel.style.display === "none" ? "flex" : "none";
+  });
+
+  sendBtn.addEventListener("click", sendMessage);
+
+  input.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      sendMessage();
+    }
+  });
+
+  micBtn.addEventListener("click", () => {
+    if (!recognition) {
+      console.warn("No recognition object");
+      return;
+    }
+    if (!listening) {
+      listening = true;
+      micBtn.textContent = "⏹";
+      micBtn.classList.add("recording");
+      recognition.start();
+    } else {
+      recognition.stop();
+    }
+  });
+</script>
+</body>
+</html>

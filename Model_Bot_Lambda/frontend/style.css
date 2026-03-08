@@ -1,0 +1,108 @@
+#pathalytics-assistant {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  z-index: 9999;
+}
+
+#assistant-toggle {
+  background: #4f46e5;
+  color: #ffffff;
+  border-radius: 999px;
+  padding: 10px 16px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#assistant-panel {
+  width: 320px;
+  height: 420px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(15, 23, 42, 0.45);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+#assistant-header {
+  padding: 10px 12px;
+  background: #111827;
+  color: #f9fafb;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+#assistant-messages {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  font-size: 13px;
+}
+
+.message {
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.message.user {
+  text-align: right;
+  color: #111827;
+}
+
+.message.bot {
+  text-align: left;
+  color: #111827;
+}
+
+.message.user span {
+  background: #4f46e5;
+  color: #ffffff;
+  padding: 6px 10px;
+  border-radius: 12px 12px 0 12px;
+  display: inline-block;
+}
+
+.message.bot span {
+  background: #f3f4f6;
+  color: #111827;
+  padding: 6px 10px;
+  border-radius: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+#assistant-controls {
+  display: flex;
+  gap: 6px;
+  padding: 8px;
+  border-top: 1px solid #e5e7eb;
+}
+
+#assistant-input {
+  flex: 1;
+  padding: 6px 8px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 13px;
+}
+
+#assistant-send,
+#assistant-mic {
+  border-radius: 999px;
+  border: none;
+  padding: 0 10px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+#assistant-send {
+  background: #4f46e5;
+  color: white;
+}
+
+#assistant-mic {
+  background: #e5e7eb;
+}

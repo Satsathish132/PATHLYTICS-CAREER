@@ -1,0 +1,452 @@
+Empowering Computer Science students and job seekers with AI-powered career guidance, personalized roadmaps, and expert mentorship.
+
+
+P
+PATHLYTICS-CAREER
+Career Recommendation
+Roadmaps
+Chatbot
+
+User
+High Demand Career
+Discover Your Path to
+AI-powered career guidance for Computer Science students and tech professionals. Find your perfect career match today.
+
+Explore Careers
+🤖
+AI/ML Engineer
+Design and develop artificial intelligence and machine learning solutions for complex problems.
+
+Growth
+
++40%
+
+Demand
+
+Very High
+
+Salary
+
+$120k - $200k
+
+
+
+
+Your Career Journey Starts Here
+Explore our powerful tools designed to guide you towards your dream career in tech.
+
+Career Recommendation
+Get personalized career suggestions based on your skills, interests, and education level.
+
+Explore
+Career Roadmaps
+Visual step-by-step guides showing the path from where you are to where you want to be.
+
+Explore
+Career Guidance Chatbot
+Chat with our AI mentor for instant career advice, learning paths, and skill guidance.
+
+Explore
+95%
+Clear Action Plan
+
+95%
+Success Rate
+
+200+
+Career Paths
+
+Ready to Shape Your Future?
+Join thousands of students who have discovered their perfect career path with PATHLYTICS-CAREER.
+
+Get Started Free
+Explore Careers
+P
+PATHLYTICS-CAREER
+Empowering Computer Science students and job seekers with AI-powered career guidance, personalized roadmaps, and expert mentorship.
+
+Quick Links
+Career Recommendation
+Career Roadmaps
+Career Chatbot
+Dashboard
+Resources
+Blog
+Career Tips
+Industry Insights
+Success Stories
+Contact Us
+support@pathlytics.career
++91 7358507075
+peri institute of technology
+© 2026 PATHLYTICS-CAREER. All rights reserved.
+
+Privacy Policy
+Terms of Service
+Cookie Policy
+
+
+P
+PATHLYTICS-CAREER
+Career Recommendation
+Roadmaps
+Chatbot
+
+User
+AI-Powered Recommendations
+Find Your Perfect Career
+Tell us about your skills, interests, personality, and work preferences. We'll recommend careers that match your unique profile.
+
+Skills
+Select your technical skills
+
+Programming Languages
+Web / App Development
+Data Analysis
+Machine Learning
+Cloud Computing
+Networking
+Cybersecurity
+UI/UX Design
+Testing & Automation
+Interests
+What excites you the most?
+
+Problem Solving
+Data & Research
+Designing Interfaces
+Security & Ethical Hacking
+Building Products
+Teaching & Mentoring
+Innovation & Startups
+Gaming / AR / VR
+Personality
+How would you describe yourself?
+
+Analytical
+Creative
+Logical Thinker
+Detail-Oriented
+Leadership-Oriented
+Research-Focused
+Work Style
+Your preferred work environment
+
+Individual-focused
+Team-based
+Remote-friendly
+Structured environment
+Flexible environment
+Fast-paced startup style
+Get Career Recommendations
+Select at least one option from any category to get recommendations
+
+P
+PATHLYTICS-CAREER
+Empowering Computer Science students and job seekers with AI-powered career guidance, personalized roadmaps, and expert mentorship.
+
+Quick Links
+Career Recommendation
+Career Roadmaps
+Career Chatbot
+Dashboard
+Resources
+Blog
+Career Tips
+Industry Insights
+Success Stories
+Contact Us
+support@pathlytics.career
++91 7358507075
+peri institute of technology
+© 2026 PATHLYTICS-CAREER. All rights reserved.
+
+Privacy Policy
+Terms of Service
+Cookie Policy
+
+
+P
+PATHLYTICS-CAREER
+Career Recommendation
+Roadmaps
+Chatbot
+
+User
+Career Roadmaps
+Choose a career path and follow the step-by-step guide to achieve your goals.
+
+High Demand
+Software Developer / Software Engineer
+Design, develop, test, and maintain software applications across various platforms and domains.
+
+Programming Languages
+Data Structures
+Algorithms
++2 more
+$80k - $150k
++25%
+High Demand
+Web Developer
+Build and maintain websites and web applications using modern frontend and backend technologies.
+
+HTML
+CSS
+JavaScript
++2 more
+$70k - $130k
++23%
+High Demand
+Mobile App Developer
+Create native and cross-platform mobile applications for iOS and Android devices.
+
+React Native
+Flutter
+Swift
++2 more
+$85k - $145k
++22%
+High Demand
+Data Analyst
+Analyze data sets to identify trends, create visualizations, and support business decisions.
+
+SQL
+Excel
+Python
++2 more
+$65k - $110k
++20%
+Very High Demand
+Data Scientist
+Extract insights from complex data sets using statistical analysis and machine learning techniques.
+
+Python
+Machine Learning
+Statistics
++2 more
+$110k - $170k
++28%
+Very High Demand
+Machine Learning Engineer
+Build, deploy, and maintain machine learning models and systems at scale.
+
+Python
+TensorFlow
+PyTorch
++2 more
+$120k - $200k
++40%
+Very High Demand
+AI Engineer
+Design and implement artificial intelligence solutions including NLP, computer vision, and deep learning systems.
+
+Python
+Deep Learning
+NLP
++2 more
+$130k - $210k
++45%
+Very High Demand
+Cloud Engineer
+Design, implement, and manage cloud infrastructure and services for scalable applications.
+
+AWS
+Azure
+GCP
++2 more
+$100k - $180k
++35%
+High Demand
+DevOps Engineer
+Bridge development and operations through automation, CI/CD pipelines, and infrastructure management.
+
+Linux
+Docker
+Kubernetes
++2 more
+$100k - $165k
++24%
+High Demand
+Systems Engineer
+Design, implement, and maintain complex IT infrastructure and system architectures.
+
+Linux
+Windows Server
+Networking
++2 more
+$90k - $150k
++18%
+Very High Demand
+Cybersecurity Analyst
+Protect organizations from cyber threats through monitoring, analysis, and incident response.
+
+Security Monitoring
+SIEM
+Incident Response
++2 more
+$85k - $140k
++32%
+Very High Demand
+Ethical Hacker
+Conduct authorized penetration testing to identify vulnerabilities and strengthen security.
+
+Penetration Testing
+Vulnerability Assessment
+Kali Linux
++2 more
+$95k - $160k
++35%
+High Demand
+Network Engineer
+Design, implement, and maintain network infrastructure including routers, switches, and firewalls.
+
+Cisco
+Routing
+Switching
++2 more
+$75k - $130k
++15%
+High Demand
+Software Tester
+Ensure software quality through manual and automated testing methodologies.
+
+Test Planning
+Test Cases
+Bug Tracking
++2 more
+$60k - $100k
++15%
+High Demand
+Automation Test Engineer
+Develop and maintain automated test frameworks and scripts for continuous testing.
+
+Selenium
+Cypress
+JavaScript
++2 more
+$80k - $130k
++20%
+High Demand
+UI/UX Designer
+Create intuitive and visually appealing user interfaces and experiences for digital products.
+
+Figma
+User Research
+Wireframing
++2 more
+$75k - $130k
++18%
+High Demand
+Technical Product Manager
+Lead product development by bridging business goals with technical implementation.
+
+Product Strategy
+Roadmapping
+Agile
++2 more
+$110k - $175k
++22%
+Very High Demand
+Research Scientist
+Conduct cutting-edge research in computer science, AI, or related fields.
+
+Research Methods
+Machine Learning
+Mathematics
++2 more
+$100k - $180k
++30%
+Very High Demand
+Computer Vision Engineer
+Develop systems that can interpret and analyze visual information from images and videos.
+
+Python
+OpenCV
+Deep Learning
++2 more
+$115k - $190k
++35%
+Growing Demand
+Blockchain Developer
+Build decentralized applications and smart contracts on blockchain platforms.
+
+Solidity
+Ethereum
+Smart Contracts
++2 more
+$100k - $180k
++28%
+Growing Demand
+Game Developer
+Create interactive games for various platforms including PC, console, and mobile.
+
+Unity
+C#
+Game Design
++2 more
+$70k - $140k
++18%
+Growing Demand
+AR / VR Developer
+Build immersive augmented and virtual reality experiences and applications.
+
+Unity
+C#
+ARKit/ARCore
++2 more
+$85k - $160k
++25%
+High Demand
+Technical Support Engineer
+Provide technical assistance and troubleshooting support for software and hardware products.
+
+Troubleshooting
+Customer Service
+Networking
++2 more
+$55k - $95k
++12%
+High Demand
+Computer Science Lecturer / Trainer
+Teach and train students or professionals in computer science concepts and technologies.
+
+Subject Expertise
+Curriculum Design
+Communication
++2 more
+$60k - $120k
++10%
+Growing Demand
+Entrepreneur
+Start and grow technology-based businesses and startups.
+
+Business Strategy
+Product Development
+Leadership
++2 more
+Variable
++15%
+P
+PATHLYTICS-CAREER
+Empowering Computer Science students and job seekers with AI-powered career guidance, personalized roadmaps, and expert mentorship.
+
+Quick Links
+Career Recommendation
+Career Roadmaps
+Career Chatbot
+Dashboard
+Resources
+Blog
+Career Tips
+Industry Insights
+Success Stories
+Contact Us
+support@pathlytics.career
++91 7358507075
+peri institute of technology
+© 2026 PATHLYTICS-CAREER. All rights reserved.
+
+Privacy Policy
+Terms of Service
+Cookie Policy
+
